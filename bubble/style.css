@@ -1,0 +1,38 @@
+body{
+    overflow: hidden;     /* on ne veut voir tous ce qui sort du body */
+    min-height: 100vh;
+    cursor: crosshair;
+
+}
+h3{
+    font-size: 10rem;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(180, 170, 170);
+}
+
+
+/* on donne les dimmensions a la bulle */
+.bubble{
+    position: absolute;
+    border-radius:300px;
+    background: rgba(255, 166, 0, 0.6);
+    opacity: 0;
+    animation: anim 8s forwards;   /* forwars veut dire ici reste a ta position du debut */
+    filter: hue-rotate(0deg);      /* la rotation des couleurs: wwww.hue-rotate */
+    }
+
+    @keyframes anim{
+        to{
+            top:-250px;
+            left: var(--left);   /* en Javascript on ne pas injecter quelque en keyframe, mais on peut creer une variable */
+            opacity: 1;
+            filter: hue-rotate(720deg);
+        }
+    }
+
+    h2{
+       font-size: 90px;
+      text-align:center; 
+    }
+   
